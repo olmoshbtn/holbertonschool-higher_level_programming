@@ -9,22 +9,22 @@
 
 int check_cycle(listint_t *list)
 {
-    listint_t *turtle = list, *hare = list;
+	listint_t *turtle = list, *hare = list;
 
-    while (turtle->next != NULL && hare->next != NULL)
-    {
-        turtle = turtle->next;
-        hare = hare->next;
+	while (turtle->next != NULL && hare->next != NULL)
+	{
+		turtle = turtle->next;
+		hare = hare->next;
 
-        if (hare->next == NULL)
-        {
-            return(0);
-        }
-        hare = hare->next;
-        if (turtle == hare)
-        {
-            return(1);
-        }
-    }
-    return(0);
+		if (hare->next == NULL)
+		{
+			return (0);
+		}
+		hare = hare->next;
+		if (turtle == hare)
+		{
+			return (1);
+		}
+	}
+	return (0);
 }
