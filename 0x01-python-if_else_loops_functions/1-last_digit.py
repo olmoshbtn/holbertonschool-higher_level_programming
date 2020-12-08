@@ -16,5 +16,10 @@ if number >= 0:
               .format(number, (number % 10)))
 # print all negative values
 else:
-    print("Last digit of {} is {}{} and is less than 6 and not 0"
-          .format(number, (str(number)[:1]), (str(number)[-1:])))
+    # print all negative last digit != 0
+    if int((str(number)[-1:])) != 0:
+        print("Last digit of {} is {}{} and is less than 6 and not 0"
+              .format(number, (str(number)[:1]), (str(number)[-1:])))
+    # print all negative last digit == 0
+    else:
+        print("Last digit of {} is {} and is 0".format(number, (number % 10)))
