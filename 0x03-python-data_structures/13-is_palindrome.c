@@ -12,8 +12,8 @@ int is_palindrome(listint_t **head)
 	int forward = 0, backward = 0, nodes = 0;
 
 	tail = *head;
-	if (head == NULL)
-		return (0);
+	if (head == NULL || *head == NULL)
+		return (1);
 
 	while (tail->next != NULL)
 	{
