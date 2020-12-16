@@ -8,32 +8,28 @@
  */
 int is_palindrome(listint_t **head)
 {
-	size_t len_list, zero_len, count_len;
-	listint_t *end_list, *beg_list;
+	listint_t *begin = *head, *tail = *head;
+	int forward = 0, backward = 0, nodes = 0;
 
-	if (head == NULL)
-		return (0);
-	if (*head)
+	if (head == NULL || *head == NULL || (*head)->next == NULL)      
+		return (1);
+
+	while (tail->next != NULL)
 	{
-		len_list = zero_len = 0;
-		end_list = beg_list = *head;
-		while (end_list->next != NULL)
-		{
-			end_list = end_list->next;
-			len_list++;
-		}
-		count_len = len_list;
-		while (count_len > zero_len)
-		{
-			if (end_list->n != beg_list->n)
-				return (0);
-			end_list -= 2;
-			beg_list += 2;
-			count_len--;
-			zero_len++;
-		}
-		return (1);
+		tail = tail->next;
+		++nodes;
 	}
-	else
-		return (1);
+
+	backward = nodes - 1;
+
+	while (backward >= 0 && forward <= backward)
+	{
+		if (tail->n != (*head)->n)
+			return (0);
+		tail -= 2;
+		begin -= 2;
+		backward--;
+		forward++;
+	}
+	return (1);
 }
