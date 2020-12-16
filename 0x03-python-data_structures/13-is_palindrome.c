@@ -20,11 +20,11 @@ int is_palindrome(listint_t **head)
 		++nodes;
 	}
 
-	backward = nodes - 1;
+	backward = nodes;
 
 	while (backward >= 0 && forward <= backward)
 	{
-		if (tail->n != (*head)->n)
+		if (tail->n != begin->n)
 			return (0);
 		tail -= 2;
 		begin -= 2;
