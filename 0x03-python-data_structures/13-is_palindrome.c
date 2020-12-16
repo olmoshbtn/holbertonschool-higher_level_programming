@@ -24,10 +24,10 @@ int is_palindrome(listint_t **head)
 
 	while (backward >= 0 && forward <= backward)
 	{
-		if (tail->n != begin->n)
+		if (tail->n != (*head)->n)
 			return (0);
 		tail -= 2;
-		begin -= 2;
+		(*head) -= 2;
 		backward--;
 		forward++;
 	}
