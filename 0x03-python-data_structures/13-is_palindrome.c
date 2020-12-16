@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
 
 	while (backward > forward)
 	{
-		if (tail->next != (*head)->next)
+		if (tail->n != (*head)->n)
 			return (0);
 		tail -= 2;
 		begin -= 2;
