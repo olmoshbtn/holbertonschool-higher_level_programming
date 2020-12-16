@@ -22,7 +22,7 @@ int is_palindrome(listint_t **head)
 
 	backward = nodes;
 
-	while (backward >= 0 && forward <= backward)
+	while (backward >= forward)
 	{
 		if (tail->n != (*head)->n)
 			return (0);
