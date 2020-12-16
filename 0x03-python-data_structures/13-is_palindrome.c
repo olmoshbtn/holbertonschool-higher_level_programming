@@ -8,10 +8,9 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *begin, *tail;
+	listint_t *begin = *head, *tail = *head;
 	int forward = 0, backward = 0, nodes = 0;
 
-	tail = *head;
 	if (head == NULL || *head == NULL)
 		return (1);
 
