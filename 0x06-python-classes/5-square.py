@@ -32,7 +32,7 @@ class Square:
         """ calculate the area of a square
         """
         return self.__size ** 2
-    
+
     def my_print(self):
         """ Print a visual representation of a square
         """
