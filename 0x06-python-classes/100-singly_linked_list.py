@@ -53,5 +53,5 @@ class SinglyLinkedList():
         """
 
     def sorted_insert(self, value):
-        """ Inset a Node into a list sorted in ascending order
+        """ Insert a Node into a list sorted in ascending order
         """
