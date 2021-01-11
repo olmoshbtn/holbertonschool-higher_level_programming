@@ -55,6 +55,6 @@ class Rectangle:
         """Returns printable string representation of the rectangle with\\
            characters '#'"""
         string = " "
-        if self.__width and self.__height:
-            string += '\n'.join(['#' * self.__width] * self.__height)
+        if self.width and self.height:
+            string += '\n'.join(['#' * self.width] * self.height)
         return string
