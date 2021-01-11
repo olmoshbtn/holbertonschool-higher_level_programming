@@ -52,9 +52,8 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __str__(self):
-        """returns printable string representation of the rectangle with\\
+        """Returns printable string representation of the rectangle with\\
            characters '#'"""
-        string = ""
         if self.width and self.height:
-            string += '\n'.join(['#' * self.width] * self.height)
-        return string
+            return '\n'.join(['#' * self.width] * self.height)
+        return ''
