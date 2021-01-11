@@ -54,8 +54,7 @@ class Rectangle:
     def __str__(self):
         """returns printable string representation of the rectangle with\\
            characters '#'"""
+        string = ""
         if self.width and self.height:
-            string = ""
-            if self.width and self.height:
-                string += '\n'.join(['#' * self.width] * self.height)
-            return string
+            string += '\n'.join(['#' * self.width] * self.height)
+        return string
