@@ -49,10 +49,10 @@ class Rectangle:
 
     def __str__(self):
         """Returns printable string representation of the rectangle"""
-        if self.width and self.height:
+        if self.height and self.width:
             return '\n'.join(['#' * self.width] * self.height)
         return ''
 
     def __repr__(self):
         """Returns a string representation of the rectangle for reproduction"""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return 'Rectangle({}, {})'.format(self.width, self.height)
