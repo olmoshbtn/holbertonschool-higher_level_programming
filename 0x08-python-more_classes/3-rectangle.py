@@ -57,5 +57,5 @@ class Rectangle:
         if self.width and self.height:
             string = ""
             if self.width and self.height:
-                string += '\n'.join(['#' * self.width] * self.height) 
+                string += '\n'.join(['#' * self.width] * self.height)
             return string
