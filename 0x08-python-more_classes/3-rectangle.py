@@ -52,7 +52,3 @@ class Rectangle:
         if self.__height and self.__width:
             return '\n'.join(['#' * self.__width] * self.__height)
         return ""
-
-    def __repr__(self):
-        """Returns a string representation of the rectangle for reproduction"""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
