@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 class LockedClass:
     """'LockedClass' prevents the user from dynamically creating new instance
         attributes, except if the instance attribute 'first_name' is called"""
