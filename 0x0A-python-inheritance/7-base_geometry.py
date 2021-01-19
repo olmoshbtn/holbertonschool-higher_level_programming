@@ -4,9 +4,8 @@
 
 class BaseGeometry():
     """Class with atribute public area"""
-    pass
-    """Raise an exception when is called"""
     def area(self):
+        """Raise an exception when is called"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
