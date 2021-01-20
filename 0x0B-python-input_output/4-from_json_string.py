@@ -1,7 +1,6 @@
 #!/usr/bin/pyhton3
 """Module function from_json_string"""
 
-
 import json
 
 
