@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """Read a text file (UTF-8) and prints it in stdout"""
-    with open(filename, mode='r', encoding='UTF-8') as seb:
+    with open(filename, mode='r', encoding='utf-8') as seb:
         print(seb_pep8.read(), end='')
