@@ -21,7 +21,7 @@ class Student:
             except:
                 pass
         return new_dict
-    
+
     def reload_from_json(self, json):
         """Replaces all attributes of the Student instance"""
         for key in json:
