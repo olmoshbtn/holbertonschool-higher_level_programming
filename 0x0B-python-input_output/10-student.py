@@ -15,9 +15,9 @@ class Student:
         if attrs is None:
             return self.__dict__
         new_dict = {}
-        for a in attrs:
+        for at in attrs:
             try:
-                new_dict[a] = self.__dict__[a]
+                new_dict[at] = self.__dict__[at]
             except:
                 pass
         return new_dict
