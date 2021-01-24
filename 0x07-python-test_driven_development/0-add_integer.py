@@ -7,8 +7,8 @@ addition"""
 
 
 def add_integer(a, b=98):
-    """Function that 
-    return the sum of two 
+    """Function that
+    return the sum of two
     integers or floats"""
     if not isinstance(a, (float, int)):
         raise TypeError("a must be an integer")
