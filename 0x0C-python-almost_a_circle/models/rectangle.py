@@ -38,7 +38,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         """Set private instance of attribute 'width'"""
-        if not isinstance(width, int):
+        if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
@@ -47,7 +47,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """Set private instance of attribute 'height'"""
-        if not isinstance(height, int):
+        if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
@@ -56,7 +56,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """Set private instance of attribute 'x'"""
-        if not isinstance(x, int):
+        if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
@@ -65,7 +65,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """Set private instance of attribute 'y'"""
-        if not isinstance(y, int):
+        if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
@@ -110,7 +110,7 @@ class Rectangle(Base):
                     self.id = value
                 if key == "width":
                     self.width = value
-                if key == "heigth":
+                if key == "height":
                     self.height = value
                 if key == "x":
                     self.x = value
@@ -118,7 +118,7 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
-        """Dictionary representation of a Square"""
+        """Dictionary representation of a Rectangle"""
         dic_rect = {
             "id": self.id,
             "width": self.width,
@@ -127,4 +127,3 @@ class Rectangle(Base):
             "y": self.y
         }
         return dic_rect
-
