@@ -86,12 +86,13 @@ class TestBase(unittest.TestCase):
         self.assertEqual(d, [d1, d2])
 
     def test_empty_to_json_string(self):
-        """Test for passing empty list/ None"""
+        """Test for passing empty list"""
         json_s = Base.to_json_string([])
         self.assertTrue(type(json_s) is str)
         self.assertEqual(json_s, "[]")
 
     def test_None_to_json_String(self):
+        """Test for passing empty None"""
         json_s = Base.to_json_string(None)
         self.assertTrue(type(json_s) is str)
         self.assertEqual(json_s, "[]")
