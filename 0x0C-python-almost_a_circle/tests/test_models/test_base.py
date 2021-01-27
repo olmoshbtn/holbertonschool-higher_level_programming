@@ -28,7 +28,7 @@ class TestBaseDocs(unittest.TestCase):
         """Test that tests/test_models/test_base.py conforms to PEP8."""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['tests/test_models/test_base.py'])
-        self.assertEqual(result.total_errors, 1,
+        self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
 
     def test_module_docstring(self):
