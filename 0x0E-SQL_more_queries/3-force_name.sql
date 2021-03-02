@@ -1,5 +1,5 @@
 -- create the table force_name
 CREATE TABLE IF NOT EXISTS `force_name` (
     `id` INT,
-    `name` VARCHAR(252) NOT NUL;
+    `name` VARCHAR(252) NOT NUL
 );
