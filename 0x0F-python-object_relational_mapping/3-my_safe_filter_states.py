@@ -16,14 +16,15 @@ if __name__ == '__main__':
             user=argv[1],
             passwd=argv[2],
             db=argv[3],
-            charset="utf8"
             )
         cursor = db.cursor()
-        cursor.execute(
-            "SELECT id, name FROM states WHERE BINARY name = %s "
-            "ORDER BY id ASC;",
-            (argv[4],)
-            )
+        query = """
+            SELECT id, name
+            FROM states
+            WHERE BINARY name = %s
+            ORDER BY id;
+            """
+        cursor.execute(query, (argv[4], ))
         rows = cursor.fetchall()
         for row in rows:
             if row in rows:
