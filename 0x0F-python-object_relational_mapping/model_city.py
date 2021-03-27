@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """
-Class definition of a State and an instance Base using SQLAlchemy
+Class definition of a City and an instance Base using SQLAlchemy
 """
 
 import sqlalchemy
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
 
-class State(Base):
+class City(Base):
     """Class State"""
-    __tablename__ = 'states'
+    __tablename__ = 'cities'
     id = Column(
         Integer,
         autoincrement=True,
@@ -20,7 +20,12 @@ class State(Base):
         primary_key=True,
         unique=True,
     )
+    state_id = Column(
+        Integer,
+        ForeignKey("states.id"),
+        nullable=False,
+    )
     name = Column(
-        String(128),
+        String(256),
         nullable=False,
     )
