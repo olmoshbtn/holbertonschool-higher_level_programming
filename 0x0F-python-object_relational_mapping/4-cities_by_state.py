@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all states from the database hbtn_0e_0_usa with a
-given name and is safe from MySQL injections
+Lists all cities from the database hbtn_0e_4_usa
 """
 
 import MySQLdb
@@ -19,12 +18,12 @@ if __name__ == '__main__':
             )
         cursor = db.cursor()
         query = """
-            SELECT id, name
-            FROM states
-            WHERE BINARY name = %s
-            ORDER BY id;
+            SELECT cities.id, cities.name, states.name 
+            FROM cities 
+            JOIN states ON cities.state_id = states.id
+            ORDER BY cities.id
             """
-        cursor.execute(query, (argv[4], ))
+        cursor.execute(query)
         rows = cursor.fetchall()
         for row in rows:
             if row in rows:
