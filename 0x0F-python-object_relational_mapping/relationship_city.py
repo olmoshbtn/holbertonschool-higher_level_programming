@@ -5,9 +5,7 @@ Class definition of a City and an instance Base using SQLAlchemy
 
 import sqlalchemy
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from relationship_state import Base, State
 
 
 class City(Base):
@@ -22,7 +20,7 @@ class City(Base):
     )
     state_id = Column(
         Integer,
-        ForeignKey("states.id"),
+        ForeignKey('states.id'),
         nullable=False,
     )
     name = Column(
